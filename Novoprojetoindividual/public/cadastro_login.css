@@ -105,6 +105,7 @@ a:hover {
 }
 
 .opcoes {
+    margin-top: 100px;
     color: aliceblue;
     align-items: center;
     display: flex;
@@ -142,4 +143,12 @@ a:hover {
     font-size: 23px;
     font-weight: 200;
     font-family: Carlito;
+}
+
+select {
+    border: #fe0016 solid 2px;
+    border-radius: 10px;
+    height: 30px;
+    font-size: 15px;
+    cursor: pointer;
 }

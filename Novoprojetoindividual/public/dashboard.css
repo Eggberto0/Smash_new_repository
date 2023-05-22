@@ -3,6 +3,7 @@
 * {
     font-family: Carlito;
     margin: 0;
+    color: white;
 }
 
 /* Navbbar */
@@ -72,6 +73,8 @@ a:hover {
 .container_index {
     padding-top: 17vh;
     display: flex;
+    flex-direction: column;
+    height: 100vh;
     align-items: center;
     justify-content: center;
     background-color: #0a0a0a;
@@ -85,6 +88,14 @@ a:hover {
 
 canvas {
     font-family: Carlito;
-    height: 3000px;
+    height: 100px;
     background-color: rgb(18, 25, 59);
+}
+
+.texto-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100px;
 }

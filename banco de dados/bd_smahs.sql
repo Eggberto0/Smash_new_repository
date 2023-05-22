@@ -106,4 +106,7 @@ select * from usuario;
 
 select * from personagem;
 
-UPDATE personagem SET curtida = curtida + 1 WHERE idPersonagem = 3;
+UPDATE personagem SET curtida = curtida + 1 WHERE idPersonagem = 1;
+
+select count(usuario.fkPersonagem) as voto, personagem.nome as personagem from usuario join personagem
+	on personagem.idPersonagem = usuario.fkPersonagem group by usuario.fkPersonagem;

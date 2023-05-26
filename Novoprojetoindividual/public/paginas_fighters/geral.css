@@ -231,3 +231,8 @@ h1 {
     text-align: center;
     overflow: hidden;
 }
+
+.troca {
+    height: 800px;
+    overflow-y: hidden;
+}

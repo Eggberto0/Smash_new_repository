@@ -21,7 +21,7 @@
             <div class="troca" id="troca">
                 <img class="fighter_title" style="cursor: pointer;" onclick="mudar()" src="https://mario.wiki.gallery/images/thumb/a/a1/SSBU_Pokemon_Trainer_Solo_Artwork.png/800px-SSBU_Pokemon_Trainer_Solo_Artwork.png" alt="">
             </div>
-            <div class="risca_fighter" style="background-color: rgb(223, 40, 40);"><img class="image_logo" src="../images/logos/Pokemon_Emblem.png" alt=""></div>
+            <div class="risca_fighter" id="risca_fighter" style="background-color: rgb(223, 40, 40);"><img class="image_logo" src="../images/logos/Pokemon_Emblem.png" alt=""></div>
             <spam class="text_name" id="text_name">Pokémon Trainer</spam>
             <div class="video_fighter">
                 <iframe width="460" height="259" src="https://www.youtube.com/embed/dYpf9FoPN_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -79,12 +79,20 @@
         "Ivysaur",
         "Charizard"
     ]
+
+    var colors = [
+        "rgb(223, 40, 40)",
+        "#24a5f0",
+        "#46c632",
+        "rgb(255, 159, 16)"
+    ]
     
     var contagem = 1
 
     function mudar() {
         troca.innerHTML = personas[contagem]
         text_name.innerHTML = names[contagem]
+        risca_fighter.style.backgroundColor = colors[contagem]
         contagem++
         if (contagem == 4) {
             contagem = 0

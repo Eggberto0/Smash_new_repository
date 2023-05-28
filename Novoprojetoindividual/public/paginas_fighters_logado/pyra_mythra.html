@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fighters - PokémonTrainer</title>
+    <link rel="stylesheet" href="geral.css">
+    <link rel="shortcut icon" href="../images/logos/XenobladeEmblem.png" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="navbar">
+        <a href="sephiroth.html" class="navegar"><</a>
+        <div class="navbar_logo_text"><a class="homepage" href="../indexLogado.html"><img src="../images/ssbu-logo.png" alt=""></a></div>
+        <a href="kazuya.html" class="navegar">></a>
+    </div>
+
+    <div class="container_index" style="background-image: url('https://ssb.wiki.gallery/images/thumb/b/b6/SSBU-Cloud_Sea_of_Alrest.jpg/1200px-SSBU-Cloud_Sea_of_Alrest.jpg')">
+        <div class="container_fighter">
+            <div class="troca" id="troca">
+                <img class="fighter_title" style="cursor: pointer;" onclick="mudar()" src="https://ssb.wiki.gallery/images/e/ec/Pyra_SSBU.png" alt="">
+            </div>
+            <div class="risca_fighter" id="risca_fighter" style="background-color: rgb(223, 40, 40);"><img class="image_logo" src="../images/logos/XenobladeEmblem.png" alt=""></div>
+            <spam class="text_name" id="text_name">Pyra</spam>
+            <div class="video_fighter">
+                <iframe width="460" height="259" src="https://www.youtube.com/embed/MJXtPnwTEWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="h1samegame">
+        <h1>Other Fighters</h1>
+    </div>
+    <div class="sameGame">
+        <a href="shulk.html"><div class="image_box">
+            <div class="rotulo">#57 Shulk</div>
+            <img class="image_character" src="https://mario.wiki.gallery/images/thumb/4/41/ShulkSSBU.png/800px-ShulkSSBU.png" alt="">
+        </div></a>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    var personas = [
+        `<img class="fighter_title" style="cursor: pointer;" onclick="mudar()" src="https://ssb.wiki.gallery/images/e/ec/Pyra_SSBU.png" alt="">`,
+        `<img class="fighter_title" style="cursor: pointer;" onclick="mudar()" src="https://ssb.wiki.gallery/images/5/58/Mythra_SSBU.png" alt="">`
+    ]
+    var names = [
+        "Pyra",
+        "Mythra"
+    ]
+
+    var colors = [
+        "rgb(223, 40, 40)",
+        "rgb(253, 203, 63)"
+    ]
+    
+    var contagem = 1
+
+    function mudar() {
+        troca.innerHTML = personas[contagem]
+        text_name.innerHTML = names[contagem]
+        risca_fighter.style.backgroundColor = colors[contagem]
+        contagem++
+        if (contagem == 2) {
+            contagem = 0
+        }
+    }
+
+</script>

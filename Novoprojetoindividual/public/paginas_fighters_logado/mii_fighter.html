@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fighters - MiiFighter</title>
+    <link rel="stylesheet" href="geral.css">
+    <link rel="shortcut icon" href="../images/logos/SmashBros_Emblem.png" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="navbar">
+        <a href="greninja.html" class="navegar"><</a>
+        <div class="navbar_logo_text"><a class="homepage" href="../indexLogado.html"><img src="../images/ssbu-logo.png" alt=""></a></div>
+        <a href="paluena.html" class="navegar">></a>
+    </div>
+
+    <div class="container_index" id="indexDiv" style="background-image: url('https://ssb.wiki.gallery/images/thumb/d/dd/SSBU-Big-Battlefield.png/1200px-SSBU-Big-Battlefield.png')">
+        <div class="container_fighter">
+            <div class="troca" id="troca">
+                <img class="fighter_title" style="cursor: pointer;" onclick="mudar()" src="https://ssb.wiki.gallery/images/thumb/e/e4/Mii_Brawler_SSBU.png/800px-Mii_Brawler_SSBU.png" alt="">
+            </div>
+                <div class="risca_fighter" id="risca_fighter" style="background-color: rgb(211, 57, 57);"><img class="image_logo" src="../images/logos/SmashBros_Emblem.png" alt=""></div>
+                <spam class="text_name" id="text_name">Mii Brawler</spam>
+            <div class="video_fighter">
+                <iframe width="460" height="259" src="https://www.youtube.com/embed/qdSKO-mc2n8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    var personas = [
+        `<img class="fighter_title" style="cursor: pointer;" onclick="mudar()" src="https://ssb.wiki.gallery/images/thumb/e/e4/Mii_Brawler_SSBU.png/800px-Mii_Brawler_SSBU.png" alt="">`,
+        `<img class="fighter_title" style="cursor: pointer;" onclick="mudar()" src="https://ssb.wiki.gallery/images/thumb/f/fa/Mii_Swordfighter_SSBU.png/800px-Mii_Swordfighter_SSBU.png" alt="">`,
+        `<img class="fighter_title" style="cursor: pointer;" onclick="mudar()" src="https://ssb.wiki.gallery/images/thumb/e/e5/Mii_Gunner_SSBU.png/800px-Mii_Gunner_SSBU.png" alt="">`
+    ]
+    var names = [
+        "Mii Brawler",
+        "Mii Swordfighter",
+        "Mii Gunner"
+    ]
+    var colors = [
+        "rgb(211, 57, 57)",
+        "rgb(43, 99, 252)",
+        "rgb(243, 214, 47)"
+    ]
+    
+    var contagem = 1
+
+    function mudar() {
+        troca.innerHTML = personas[contagem]
+        text_name.innerHTML = names[contagem]
+        risca_fighter.style.backgroundColor = colors[contagem]
+        contagem++
+        if (contagem == 3) {
+            contagem = 0
+        }
+    }
+
+</script>

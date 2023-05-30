@@ -267,3 +267,114 @@ h1 {
 .mapLine img {
     padding: 4px;
 }
+
+.smashes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+    background-color: #0a0a0a;
+    color: white;
+}
+
+.forSmash {
+    height: 200px;
+    margin-top: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.smashesIMG {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #0a0a0a;
+    color: white;
+}
+
+.forSmash img {
+    height: 100%;
+    cursor: pointer;
+}
+
+.forSmash img:hover {
+    border: #fe0016 solid 4px;
+    height: 97%;
+}
+
+.lineRed {
+    margin-top: 150px;
+    background-color: #fe0016;
+    border-top: #0a0a0a solid 2px;
+    width: 100%;
+    height: 80px;
+    color: white;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lineRed h1 {
+    border: none;
+}
+
+.smashes spam {
+    color: white;
+    width: 90%;
+}
+
+.smashesTXT {
+    color: white;
+    width: 90%;
+    margin-top: 100px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: white;
+    border-left: solid 2px #0a0a0a;
+    border-top: #0a0a0a solid 2px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0a0a0a; 
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #fe0016; 
+}
+
+.about {
+    width: 100%;
+    height: 1250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.about img {
+    width: 70%;
+}
+
+.infoSSF {
+    text-align: center;
+    width: 50%;
+    border: solid #0a0a0a 2px;
+}
+
+.infosSmashF {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}

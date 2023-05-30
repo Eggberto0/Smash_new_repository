@@ -9,6 +9,9 @@
     <link rel="shortcut icon" href="images/Smash_Ball.svg.png" type="image/x-icon">
 </head>
 <body>
+    <div class="sidebar" id="sidebar">
+    
+    </div>
     
 <div class="navbar">
     <div class="navbar_logo">
@@ -16,10 +19,9 @@
     </div>
     <div class="navbar_logo_text"></div>
     <div class="navbar_opcoes">
-        <a href="tela_inicio.html">Perfil</a>
+        <a onclick="sidebarOpen()" style="cursor: pointer;">Perfil</a>
     </div>
 </div>
-
 <div class="container_index">
     <div class="container_image">
         <img src="images/thumb-1920-927337.png" alt="" class="image_inicial">
@@ -381,11 +383,200 @@
     </div>
     <div class="image_widescreen">
         <img class="image_gigante" src="images/ssbu-characters.jpg" alt="">
-        <div class="div_sao">
-        <div class="divisao"></div>
-        </div>
         <div class="logo_absoluta">
             <img class="logo_absoluta_image" src="images/Super_Smash_Bros._Ultimate_logo.svg.png" alt="">
+        </div>
+    </div>
+    <div class="div_sao">
+        <div class="divisao"></div>
+    </div>
+    <div class="container_mapas">
+        <h1>Arenas</h1>
+        <div class="mapas">
+            <div class="mapLine">
+                <img src="https://ssb.wiki.gallery/images/thumb/8/86/SSBU-Battlefield.png/150px-SSBU-Battlefield.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/7/7e/SSBU-Small-Battlefield.jpg/150px-SSBU-Small-Battlefield.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/d/dd/SSBU-Big-Battlefield.png/150px-SSBU-Big-Battlefield.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/9/91/SSBU-Final_Destination.jpg/150px-SSBU-Final_Destination.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/f/f5/SSBU-New_Donk_City_Hall.jpg/150px-SSBU-New_Donk_City_Hall.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/a/a8/SSBU-Great_Plateau_Tower.jpg/150px-SSBU-Great_Plateau_Tower.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/c/c7/SSBU-Garreg_Mach_Monastery.jpg/150px-SSBU-Garreg_Mach_Monastery.jpg" alt="">
+            </div>
+            <div class="mapLine">
+                <img src="https://ssb.wiki.gallery/images/thumb/b/b6/SSBU-Cloud_Sea_of_Alrest.jpg/150px-SSBU-Cloud_Sea_of_Alrest.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/9/90/SSBU-Moray_Towers.png/150px-SSBU-Moray_Towers.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/5/55/SSBU-Spring_Stadium.jpg/150px-SSBU-Spring_Stadium.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/e/ee/SSBU_Northern_Cave.png/150px-SSBU_Northern_Cave.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/c/c1/SSBU-Dracula%27s_Castle.png/150px-SSBU-Dracula%27s_Castle.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/4/43/SSBU-Mementos.jpg/150px-SSBU-Mementos.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/a/a3/SSBU-Yggdrasil%27sAltar.jpg/150px-SSBU-Yggdrasil%27sAltar.jpg" alt="">
+            </div>
+            <div class="mapLine">
+                <img src="https://ssb.wiki.gallery/images/thumb/1/13/SSBU-Spiral_Mountain.jpg/150px-SSBU-Spiral_Mountain.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/f/fc/SSBU-Wuhu_Island.png/150px-SSBU-Wuhu_Island.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/3/39/SSBU-Minecraft_World.jpg/150px-SSBU-Minecraft_World.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/a/ab/SSBU-Mishima_Dojo.png/150px-SSBU-Mishima_Dojo.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/7/7e/SSBU-Hollow_Bastion.jpg/150px-SSBU-Hollow_Bastion.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/2/29/SSBU-Peach%27s_Castle.png/150px-SSBU-Peach%27s_Castle.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/4/46/SSBU-Mushroom_Kingdom_%28SSB%29.png/150px-SSBU-Mushroom_Kingdom_%28SSB%29.png" alt="">
+            </div>
+            <div class="mapLine">
+                <img src="https://ssb.wiki.gallery/images/thumb/2/2a/SSBU-Princess_Peach%27s_Castle.png/150px-SSBU-Princess_Peach%27s_Castle.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/8/84/SSBU-Rainbow_Cruise.png/150px-SSBU-Rainbow_Cruise.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/9/92/SSBU-Mushroom_Kingdom_II.png/150px-SSBU-Mushroom_Kingdom_II.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/5/5b/SSBU-Delfino_Plaza.jpg/150px-SSBU-Delfino_Plaza.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/c/c1/SSBU-Mushroomy_Kingdom.png/150px-SSBU-Mushroomy_Kingdom.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/6/6f/SSBU-Mario_Circuit_%28SSBB%29.png/150px-SSBU-Mario_Circuit_%28SSBB%29.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/3/39/SSBU-Luigi%27s_Mansion.png/150px-SSBU-Luigi%27s_Mansion.png" alt="">
+            </div>
+            <div class="mapLine">
+                <img src="https://ssb.wiki.gallery/images/thumb/8/82/SSBU-Mario_Bros.png/150px-SSBU-Mario_Bros.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/8/82/SSBU-3D_Land.png/150px-SSBU-3D_Land.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/a/a1/SSBU-Golden_Plains.png/150px-SSBU-Golden_Plains.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/9/98/SSBU-Paper_Mario.png/150px-SSBU-Paper_Mario.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/a/a1/SSBU-Mushroom_Kingdom_U.png/150px-SSBU-Mushroom_Kingdom_U.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/c/c8/SSBU-Mario_Galaxy.jpg/150px-SSBU-Mario_Galaxy.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/d/de/SSBU-Mario_Circuit_%28SSB4%29.png/150px-SSBU-Mario_Circuit_%28SSB4%29.png" alt="">
+            </div>
+            <div class="mapLine">
+                <img src="https://ssb.wiki.gallery/images/thumb/f/f1/SSBU-Super_Mario_Maker.png/150px-SSBU-Super_Mario_Maker.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/9/9a/SSBU-Yoshi%27s_Island_%28SSBM%29.png/150px-SSBU-Yoshi%27s_Island_%28SSBM%29.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/0/0c/SSBU-Yoshi%27s_Story.png/150px-SSBU-Yoshi%27s_Story.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/7/7b/SSBU-Yoshi%27s_Island_%28SSBB%29.png/150px-SSBU-Yoshi%27s_Island_%28SSBB%29.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/7/73/SSBU-Kongo_Jungle.png/150px-SSBU-Kongo_Jungle.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/b/b4/SSBU-Kongo_Falls.jpg/150px-SSBU-Kongo_Falls.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/4/4c/SSBU-Jungle_Japes.png/150px-SSBU-Jungle_Japes.png" alt="">
+            </div>
+            <div class="mapLine">
+                <img src="https://ssb.wiki.gallery/images/thumb/3/31/SSBU-75m.png/150px-SSBU-75m.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/b/bb/SSBU-Hyrule_Castle.png/150px-SSBU-Hyrule_Castle.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/8/83/SSBU-Great_Bay.jpg/150px-SSBU-Great_Bay.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/3/3b/SSBU-Temple.png/150px-SSBU-Temple.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/9/99/SSBU-Bridge_of_Eldin.png/150px-SSBU-Bridge_of_Eldin.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/2/25/SSBU-Pirate_Ship.png/150px-SSBU-Pirate_Ship.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/5/5d/SSBU-Gerudo_Valley.png/150px-SSBU-Gerudo_Valley.png" alt="">
+            </div>
+            <div class="mapLine">
+                <img src="https://ssb.wiki.gallery/images/thumb/0/0a/SSBU-Spirit_Train.png/150px-SSBU-Spirit_Train.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/7/7b/SSBU-Skyloft.png/150px-SSBU-Skyloft.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/d/d1/SSBU-Brinstar.png/150px-SSBU-Brinstar.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/b/b3/SSBU-Brinstar_Depths.png/150px-SSBU-Brinstar_Depths.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/6/6f/SSBU-Norfair.png/150px-SSBU-Norfair.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/9/98/SSBU-Frigate_Orpheon.png/150px-SSBU-Frigate_Orpheon.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/6/68/SSBU-Dream_Land.png/150px-SSBU-Dream_Land.png" alt="">
+            </div>
+            <div class="mapLine">
+                <img src="https://ssb.wiki.gallery/images/thumb/c/c3/SSBU-Fountain_of_Dreams.png/150px-SSBU-Fountain_of_Dreams.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/5/5a/SSBU-Green_Greens.png/150px-SSBU-Green_Greens.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/2/22/SSBU-Halberd.png/150px-SSBU-Halberd.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/d/d7/SSBU-Dream_Land_%283DS%29.png/150px-SSBU-Dream_Land_%283DS%29.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/7/7c/SSBU-The_Great_Cave_Offensive.png/150px-SSBU-The_Great_Cave_Offensive.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/0/01/SSBU-Corneria.png/150px-SSBU-Corneria.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/8/8d/SSBU-Venom.png/150px-SSBU-Venom.png" alt="">
+            </div>
+            <div class="mapLine">
+                <img src="https://ssb.wiki.gallery/images/thumb/5/5f/SSBU-Lylat_Cruise.jpg/150px-SSBU-Lylat_Cruise.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/5/5a/SSBU-Saffron_City.jpg/150px-SSBU-Saffron_City.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/7/73/SSBU-Pok%C3%A9mon_Stadium.png/150px-SSBU-Pok%C3%A9mon_Stadium.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/7/73/SSBU-Pok%C3%A9mon_Stadium_2.png/150px-SSBU-Pok%C3%A9mon_Stadium_2.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/2/26/SSBU-Spear_Pillar.png/150px-SSBU-Spear_Pillar.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/b/b2/SSBU-Unova_Pok%C3%A9mon_League.png/150px-SSBU-Unova_Pok%C3%A9mon_League.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/6/6e/SSBU-Prism_Tower.png/150px-SSBU-Prism_Tower.png" alt="">
+            </div>
+            <div class="mapLine">
+                <img src="https://ssb.wiki.gallery/images/thumb/b/bf/SSBU-Kalos_Pok%C3%A9mon_League.png/150px-SSBU-Kalos_Pok%C3%A9mon_League.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/6/61/SSBU-Big_Blue.png/150px-SSBU-Big_Blue.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/d/d4/SSBU-Port_Town_Aero_Dive.png/150px-SSBU-Port_Town_Aero_Dive.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/0/0f/SSBU-Mute_City_%283DS%29.png/150px-SSBU-Mute_City_%283DS%29.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/6/68/SSBU-Onett.png/150px-SSBU-Onett.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/4/4c/SSBU-New_Pork_City.png/150px-SSBU-New_Pork_City.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/b/b7/SSBU-Magicant.png/150px-SSBU-Magicant.png" alt="">
+            </div>
+            <div class="mapLine">
+                <img src="https://ssb.wiki.gallery/images/thumb/c/c9/SSBU-Summit.png/150px-SSBU-Summit.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/2/20/SSBU-Castle_Siege.png/150px-SSBU-Castle_Siege.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/e/e8/SSBU-Arena_Ferox.png/150px-SSBU-Arena_Ferox.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/7/7a/SSBU-Coliseum.png/150px-SSBU-Coliseum.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/e/ec/SSBU-Flat_Zone_X.png/150px-SSBU-Flat_Zone_X.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/7/7c/SSBU-Skyworld.png/150px-SSBU-Skyworld.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/c/ce/SSBU-Reset_Bomb_Forest.png/150px-SSBU-Reset_Bomb_Forest.png" alt="">
+            </div>
+            <div class="mapLine">
+                <img src="https://ssb.wiki.gallery/images/thumb/6/69/SSBU-Palutena%27s_Temple.png/150px-SSBU-Palutena%27s_Temple.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/4/4d/SSBU-WarioWare%2C_Inc..png/150px-SSBU-WarioWare%2C_Inc..png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/3/32/SSBU-Gamer.png/150px-SSBU-Gamer.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/7/7d/SSBU-Distant_Planet.png/150px-SSBU-Distant_Planet.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/c/c9/SSBU-Garden_of_Hope.png/150px-SSBU-Garden_of_Hope.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/0/02/SSBU-Smashville.png/150px-SSBU-Smashville.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/f/fc/SSBU-Tortimer_Island.png/150px-SSBU-Tortimer_Island.png" alt="">
+            </div>
+            <div class="mapLine">
+                <img src="https://ssb.wiki.gallery/images/thumb/2/26/SSBU-Town_and_City.png/150px-SSBU-Town_and_City.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/d/db/SSBU-Wii_Fit_Studio.png/150px-SSBU-Wii_Fit_Studio.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/a/ac/SSBU-Boxing_Ring.png/150px-SSBU-Boxing_Ring.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/5/5d/SSBU-Gaur_Plain.png/150px-SSBU-Gaur_Plain.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/e/ed/SSBU-Duck_Hunt.png/150px-SSBU-Duck_Hunt.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/2/24/SSBU-Shadow_Moses_Island_2.jpg/150px-SSBU-Shadow_Moses_Island_2.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/0/04/SSBU-Green_Hill_Zone.png/150px-SSBU-Green_Hill_Zone.png" alt="">
+            </div>
+            <div class="mapLine">
+                <img src="https://ssb.wiki.gallery/images/thumb/2/2c/SSBU-Windy_Hill_Zone.png/150px-SSBU-Windy_Hill_Zone.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/9/93/SSBU-Wily_Castle.png/150px-SSBU-Wily_Castle.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/4/43/SSBU-Pac-Land.png/150px-SSBU-Pac-Land.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/d/d9/SSBU-Suzaku_Castle.png/150px-SSBU-Suzaku_Castle.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/1/17/SSBU-Midgar.jpg/150px-SSBU-Midgar.jpg" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/0/0d/SSBU-Umbra_Clock_Tower.png/150px-SSBU-Umbra_Clock_Tower.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/b/bd/SSBU-Hanenbow.png/150px-SSBU-Hanenbow.png" alt="">
+            </div>
+            <div class="mapLine">
+                <img src="https://ssb.wiki.gallery/images/thumb/0/07/SSBU-PictoChat_2.png/150px-SSBU-PictoChat_2.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/e/e1/SSBU-Balloon_Fight.png/150px-SSBU-Balloon_Fight.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/5/56/SSBU-Living_Room.png/150px-SSBU-Living_Room.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/2/2b/SSBU-Find_Mii.png/150px-SSBU-Find_Mii.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/9/96/SSBU-Tomodachi_Life.png/150px-SSBU-Tomodachi_Life.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/5/52/SSBU-Wrecking_Crew.png/150px-SSBU-Wrecking_Crew.png" alt="">
+                <img src="https://ssb.wiki.gallery/images/thumb/a/a3/SSBU-Pilotwings.png/150px-SSBU-Pilotwings.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="lineRed"><h1>Jogos da franquia</h1></div>
+    <div class="smashes">
+        <div class="smashesIMG">
+            <div class="forSmash" id="SmashC">
+            <img onclick="smashC()" src="https://upload.wikimedia.org/wikipedia/en/4/42/Supersmashbox.jpg" alt="">
+                <spam>Super Smash Bros</spam>
+            </div>
+            <div class="forSmash" id="SmashMelee">
+                <img onclick="smahsMelee()" src="https://upload.wikimedia.org/wikipedia/en/7/75/Super_Smash_Bros_Melee_box_art.png" alt="">
+                <spam>Super Smash Bros Melee</spam>
+            </div>
+            <div class="forSmash" id="SmashB">
+                <img onclick="smashB()" src="https://upload.wikimedia.org/wikipedia/en/f/f3/SSBB_Cover.jpg" alt="">
+                <spam>Super Smash Bros Brawl</spam>
+            </div>
+            <div class="forSmash" id="Smash3D">
+                <img onclick="smash3D()" src="https://oyster.ignimgs.com/mediawiki/apis.ign.com/super-smash-bros-next/8/88/Smashbros-boxart-logos.jpg?width=640" alt="">
+                <spam>Super Smash Bros for 3DS/WiiU</spam>
+            </div>
+            <div class="forSmash" id="SmashUlt">
+                <img onclick="smashUlt()" src="https://upload.wikimedia.org/wikipedia/en/5/50/Super_Smash_Bros._Ultimate.jpg" alt="">
+                <spam>Super Smash Bros Ultimate</spam>
+            </div>
+        </div>
+        <div class="smashesTXT" id="smashesTXT"></div>
+    </div>
+    <div class="about">
+        <img src="https://1.bp.blogspot.com/-G9YGj22ub4A/WZbyAY7JH-I/AAAAAAAA14g/K2S3wAS1pfoeFfFSflxn8juv5jvcvNdsACLcBGAs/s1600/super%2Bprocessinho%2Bda%2Bnintendo%2Bflash%2B2.jpg" alt="">
+        <div class="infosSmashF">
+            <div class="infoSSF">Super Smash Flash é uma série de jogos de navegador de luta publicados pela empresa independente McLeodGaming, liderada por Gregory McLeod sob o pseudônimo Cleod9. É baseado na série Super Smash Bros. O Super Smash Flash original é baseado especificamente em Super Smash Bros. Melee.
+                O sucesso de Super Smash Flash logo levou a uma alta demanda por uma sequência. Quando a McLeodGaming iniciou o desenvolvimento de Super Smash Flash 2 em 2007, o jogo foi planejado para ser uma sequência do Super Smash Flash original, com estética incremental e melhorias na jogabilidade. Este plano foi finalmente descartado em favor de um novo começo para reiniciar a série. Apesar do título, Super Smash Flash 2 não é realmente uma sequência; é um jogo totalmente novo e só mantém o nome original do projeto por causa do quão amplamente conhecido o título se tornou entre os fãs. Embora o jogo ainda não esteja completo, pré-lançamentos - também conhecidos como demos do jogo - foram postados em seu site para que usuários e fãs vejam o quão avançado está o desenvolvimento do jogo. Várias tentativas de postar pequenas atualizações para o jogo também foram postadas no "Smash Flash DOJO", um dos vários sites administrados por desenvolvedores baseados em um site similar da Nintendo para a série Smash Bros., mas cada tentativa foi abandonada. [9] As atualizações também são postadas ocasionalmente nas páginas da equipe no Facebook e no Twitter.
+                Houve dois grandes pontos de virada no desenvolvimento do jogo. A primeira foi em 1º de janeiro de 2009, no lançamento da v0.4a. Este foi o ponto em que o jogo começou a se tornar consideravelmente mais complexo, levando a dificuldades no desenvolvimento, já que a dificuldade de adicionar novos personagens foi declarada por Cleod como tendo "aumentado exponencialmente" neste ponto.[10] A segunda virada veio com o lançamento seguinte, v0.7, em 1º de janeiro de 2011. Inicialmente pensado para ser apenas uma atualização que adicionava conteúdo, Black Mage foi incluído como um personagem oculto após jogar dez batalhas. Isso foi um choque para a base de fãs, já que ele foi o primeiro personagem a ser apresentado que não estava na lista de personagens originalmente planejada. Diretamente relacionado ao conhecimento de sua inclusão surpresa se espalhando entre a base de fãs em geral, McLeodGaming logo fez um anúncio de que a lista planejada frequentemente criticada havia passado por uma revisão completa.[11]
+                A demo final, Super Smash Flash 2 Beta, foi anunciada em 25 de janeiro de 2015. Foi notável por abandonar o número da versão e se designar como uma versão beta em vez de uma demo. Em 29 de maio de 2017, o Super Smash Flash 2 Beta foi finalmente lançado após três anos de desenvolvimento. Ele adicionou vários aspectos para se destacar como um jogo, ambos presentes nos títulos oficiais do Super Smash Bros., como o Modo Clássico (principalmente na veia do Super Smash Bros. original, mas com elementos adicionados) e originais do jogo, como Arena Mode. As atualizações para esta versão são designadas com um número de versão separado começando em 1.0, com a atualização mais recente sendo Beta 1.3.1, lançada em 12 de agosto de 2021.[12]
+            </div>
+            <div class="videossf">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/mVoprpAs8fA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <span>Para baixar o jogo ou saber mais sobre, acesse o site oficial<br>de Super Smash Flash 2 clicando <a href="https://www.supersmashflash.com/play/ssf2/downloads/">AQUI</a>.</span>
+            </div>
         </div>
     </div>
 </div>
@@ -398,3 +589,49 @@
 
 </body>
 </html>
+
+<script>
+
+    function smashC() {
+        smashesTXT.innerHTML = ""
+        smashesTXT.innerHTML = `Super Smash Bros. é um jogo eletrônico de luta crossover desenvolvido pela HAL Laboratory e publicado pela Nintendo para o Nintendo 64. Foi lançado no Japão em 21 de janeiro de 1999, na América do Norte em 26 de abril de 1999, e na Europa em 19 de novembro de 1999.
+    Em geral, Super Smash Bros. foi elogiado pela crítica. Foi um sucesso comercial, vendendo mais de cinco milhões de cópias até 2001, sendo 2,93 milhões nos Estados Unidos e 1,97 milhão no Japão. Foi premiado com o Editors' Choice da IGN pelo "Melhor Jogo de Luta", e também se tornou um título Player's Choice. O jogo gerou uma série de continuações para cada console sucessivo da Nintendo, começando com Super Smash Bros. Melee, lançado para o GameCube em 2001.
+    Super Smash Bros. foi lançado para o Virtual Console do Wii em 2009. A Nintendo apontou que esse era seu 500º lançamento de Virtual Console na América do Norte. Em julho de 2013, o jogo foi oferecido como um dos vários jogos de Virtual Console que os membros do "Elite Status" do Club Nintendo norte-americano podiam resgatar como presente.<br><br><button onclick="limpar()">Limpar</button>`
+    }
+
+    function smahsMelee() {
+        smashesTXT.innerHTML = ""
+        smashesTXT.innerHTML = `Super Smash Bros. Melee, chamado no Japão de Super Smash Bros. DX, é um jogo eletrônico de luta crossover desenvolvido pela HAL Laboratory e publicado pela Nintendo. É o segundo jogo da série Super Smash Bros. e foi lançado exclusivamente para Nintendo GameCube em 21 de novembro de 2001 no Japão, 3 de dezembro de 2001 na América do Norte e 24 de maio de 2002 na Europa. O jogo é centrado nas batalhas entre os personagens das franquias de jogos eletrônicos da Nintendo como Mario, The Legend of Zelda ou Pokémon.
+    Melee inclui todos os personagens do primeiro jogo, mas também adiciona personagens de outras franquias, como Fire Emblem, dos quais nenhum jogo havia sido lançado fora do Japão na época. A jogabilidade de Melee oferece uma abordagem não ortodoxa para o gênero dos jogos de luta, com um contador que mede o dano com porcentagens crescentes, representando o knockback que o personagem terá, em vez de uma barra de pontos de vida que diminui, vista na maioria dos jogos de luta. Após a popularidade de sua jogabilidade multijogador, o Melee foi apresentado em muitos torneios competitivos e é um dos jogos de luta competitivos mais populares.
+    Super Smash Bros. Melee recebeu elogios da crítica, além de vários prêmios e reconhecimentos de várias publicações, inclusive, sendo considerado um dos melhores jogos já feitos. Conseguiu fortes vendas após o seu lançamento, tornando-se o título mais vendido do GameCube, com mais de sete milhões de cópias vendidas em 2008. Super Smash Bros. Melee foi seguido por Super Smash Bros. Brawl para o Wii no mesmo ano.<br><br><button onclick="limpar()">Limpar</button>`
+    }
+
+    function smashB() {
+        smashesTXT.innerHTML = ""
+        smashesTXT.innerHTML = `Super Smash Bros. Brawl, chamado no Japão de Super Smash Bros. X , é um jogo eletrônico de luta crossover desenvolvido pela Sora Ltd. e publicado pela Nintendo para o Wii. É o terceiro jogo da franquia Super Smash Bros., expandindo sua lista de personagens em relação ao antecessor e sendo o primeiro da série a incluir personagens de third-parties. Com novos estágios, modos de jogo e extras, foi aclamado pela mídia, vendeu mais de 10 milhões de cópias no mundo e tornou-se o segundo jogo mais vendido de 2008.
+    Como seus dois antecessores, Super Smash Bros. Brawl é considerado como uma exceção em jogos de luta por causa de seu método simplificado de comandos e ênfase em nocautes para fora da arena. Brawl também inclui um modo solo mais arrojado que os antecessores, com a criação do novo modo de aventura em side-scrolling, The Subspace Emissary. Este tem como principal característica a história em CGI apresentando os personagens jogáveis de Brawl. O título dá suporte a até quatro jogadores de uma vez, além de ser compatível com a conexão à Nintendo Wi-Fi Connection. A maior parte das músicas do jogo são arranjos de temas de jogos anteriores de outras franquias, feitos por 39 renomados músicos de várias empresas de video games.
+    Super Smash Bros. Brawl foi anunciado em uma conferência pré-E3 de 2005 pelo presidente da Nintendo Satoru Iwata. Mais tarde no mesmo dia, Iwata pediu ao diretor dos dois outros games da série, Masahiro Sakurai, que também dirigisse o terceiro game, aceitando. Quando a produção do jogo começou em outubro de 2005, a Nintendo listou a ajuda de produtores estrangeiros especialmente para Brawl. Na E for All de 2007, o presidente da Nintendo of America, Reggie Fils-Aime, disse que Brawl seria lançado em dezembro daquele ano nas Américas. O lançamento seria adiado para 10 de fevereiro de 2008 e depois para 9 de março do mesmo ano.<br><br><button onclick="limpar()">Limpar</button>`
+    }
+
+    function smash3D() {
+        smashesTXT.innerHTML = ""
+        smashesTXT.innerHTML = `Super Smash Bros. for Nintendo 3DS e Wii U são dois jogos eletrônicos de luta, desenvolvidos pela Sora Ltd. em cooperação com a Bandai Namco Games, e publicados pela Nintendo para Wii U e Nintendo 3DS. Os dois formam, juntos, o quarto título na série de jogos Super Smash Bros., na qual personagens de diversas franquias da Nintendo (incluindo personagens de terceiros presentes em jogos disponíveis em consoles da Nintendo) lutam entre si em arenas baseadas também em jogos da Nintendo. Os dois jogos foram lançados para o Nintendo 3DS e o Nintendo Wii U. A data de lançamento da versão de 3DS foi confirmada em 3 de outubro de 2014, enquanto a versão de Wii U foi lançada em 21 de Novembro de 2014. No Brasil a versão de 3DS foi lançada em 3 de outubro, enquanto que a versão de Wii U foi lançada em 5 de dezembro.
+    Os jogos começaram a ser desenvolvidos em 2012 e foram anunciados oficialmente na E3 2013. O jogo trouxe diversas novidades para a franquia como luta com até oito jogadores lutando por vez na versão de Wii U, suporte para a figuras Amiibo da Nintendo, utilização de Miis personalizados como lutadores jogáveis, conteúdo para download após o lançamento com lutadores e estágios adicionais e movimentos especiais personalizáveis. Alguns recursos dos jogos anteriores da série foram removidos, como o modo história de Brawl. Os críticos aplaudiram os novos elementos de jogabilidade existentes de Super Smash Bros. mas criticaram alguns problemas no modo online. A versão de Nintendo 3DS vendeu 9,52 milhões de cópias e 5,38 milhões unidades para a versão de Wii U.<br><br><button onclick="limpar()">Limpar</button>`
+    }
+
+    function smashUlt() {
+        smashesTXT.innerHTML = ""
+        smashesTXT.innerHTML = `Super Smash Bros. Ultimate, chamado no Japão de Super Smash Bros. Special, é um jogo eletrônico de luta da série Super Smash Bros. desenvolvido pela Bandai Namco Studios e Sora Ltd. e publicado pela Nintendo. Foi lançado para Nintendo Switch em 7 de dezembro de 2018. O jogo segue o estilo tradicional de jogabilidade da série: controlando um dos diversos personagens, os jogadores devem usar ataques diferentes para enfraquecer seus oponentes e derrubá-los de uma arena. Ele possui uma grande variedade de modos de jogo, incluindo uma campanha para modos single-player e multiplayer versus. Ultimate apresenta mais de 80 lutadores jogáveis, incluindo todos os personagens dos jogos anteriores do Super Smash Bros., ao lado de vários recém-chegados. A lista varia entre personagens da franquia da Nintendo e personagens de franquias terceiras, com outros sendo adicionados através de conteúdo para download.
+    O jogo recebeu aclamação universal, com alguns críticos considerando o melhor da série. Eles elogiaram sua quantidade de conteúdo e o balanceamento dos elementos de jogabilidade, entretanto seu modo online recebeu algumas críticas negativas. Ultimate tornou-se o jogo de luta mais vendido de todos os tempos, tendo vendido de 25 milhões de cópias até setembro de 2021.<br><br><button onclick="limpar()">Limpar</button>`
+    }
+
+    function limpar() {
+        smashesTXT.innerHTML = ""
+    }
+
+    function sidebarOpen() {
+        sidebar.style.widith = "20%"
+        sidebar.innerHTML = ``
+    }
+
+</script>

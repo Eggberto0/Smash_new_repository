@@ -378,3 +378,30 @@ h1 {
     justify-content: space-evenly;
     margin-top: 20px;
 }
+
+.sidebar {
+    width: 0%;
+    height: 100%;
+    position: fixed;
+}
+
+.videossf {
+    display: flex;
+    flex-direction: column;
+    font-family: Carlito;
+    color: black;
+    font-size: 23px;
+    font-weight: 200;
+    transition: all ease-in-out 0.2s;
+}
+
+.videossf a {
+    color: black;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+}
+
+.videossf a:hover {
+    color: #fe0016;
+}

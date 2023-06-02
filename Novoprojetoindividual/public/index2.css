@@ -339,7 +339,7 @@ h1 {
   
 /* Track */
 ::-webkit-scrollbar-track {
-    background: white;
+    background: #fe0015;
     border-left: solid 2px #0a0a0a;
     border-top: #0a0a0a solid 2px;
 }
@@ -347,11 +347,12 @@ h1 {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #0a0a0a; 
+    transition: all ease-in-out 0.2s;
 }
   
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #fe0016; 
+    background: #ffffff; 
 }
 
 .about {
@@ -365,6 +366,11 @@ h1 {
 
 .about img {
     width: 70%;
+    border: #0a0a0a solid 2px;
+}
+
+.about iframe {
+    border: #0a0a0a solid 2px;
 }
 
 .infoSSF {
@@ -380,9 +386,34 @@ h1 {
 }
 
 .sidebar {
-    width: 0%;
-    height: 100%;
+    width: 0px;
+    height: 100vh;
     position: fixed;
+    background-color: #0a0a0a;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .fecharSbar a {
+    font-size: 35px;
+    margin: 15px;
+}
+
+.fecharSbar {
+    text-align: start;
+    width: 100%;
+    height: 15%;
+}
+
+.infosSbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 65%;
 }
 
 .videossf {
@@ -404,4 +435,10 @@ h1 {
 
 .videossf a:hover {
     color: #fe0016;
+}
+
+.tela {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="match.css">
+    <link rel="shortcut icon" href="images/Smash_Ball.svg_branco.png" type="image/x-icon">
+    <title>SMASH - Random Match</title>
+</head>
+<body>
+    
+<div class="tela">    
+    <div class="sidebar" id="sidebar">
+
+    </div>
+    <div class="navbar">
+        <div class="navbar_logo">
+            <div class="navbar_logo_image"></div>
+        </div>
+        <div class="navbar_logo_text"></div>
+        <div class="navbar_opcoes">
+            <a onclick="sidebarOpen()" style="cursor: pointer;">Perfil</a>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
+
+<script>
+
+    function sidebarOpen() {
+        var Sbar = document.getElementById("sidebar");
+        var width = Sbar.offsetWidth;
+
+        if (width === 0) {
+            Sbar.style.width = "250px";
+            Sbar.innerHTML = `<div class="fecharSbar">
+                <a onclick="sidebarOpen()" style="cursor: pointer;">x</a>
+            </div>
+            <div class="infosSbar">
+                <a href="dashboard.html" style="cursor: pointer;">Dashboard</a>
+                <a href="match.html" style="cursor: pointer;">Random Match</a>
+                <a href="tela_inicio.html" style="cursor: pointer;">Sair</a>
+            </div>`;
+        } else {
+            Sbar.style.width = "0";
+            Sbar.innerHTML = "";
+        }
+    }
+
+</script>

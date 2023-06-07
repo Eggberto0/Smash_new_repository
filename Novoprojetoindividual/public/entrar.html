@@ -15,9 +15,7 @@
     </div>
     <div class="container_info">
         <div class="navbar">
-            <div class="navbar_logo">
-                <div class="navbar_logo_text"></div>
-            </div>
+            <div class="navbar_logo_text"><a class="homepage" href="../tela_inicio.html"><img src="../images/ssbu-logo.png" alt=""></a></div>
         </div>
         <div class="opcoes">
             <div class="op_itens">Email: <input type="text" id="email" class="campo"></div>
@@ -39,6 +37,7 @@ function entrar() {
         var senhaVar = senha.value;
 
         if (emailVar == "" || senhaVar == "") {
+            alert("Email ou senha inválidos");
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
             finalizarAguardar();
@@ -65,6 +64,7 @@ function entrar() {
 
             if (resposta.ok) {
                 console.log(resposta);
+                alert("Login feito com sucesso!");
 
                 resposta.json().then(json => {
                     console.log(json);
@@ -83,6 +83,7 @@ function entrar() {
             } else {
 
                 console.log("Houve um erro ao tentar realizar o login!");
+                alert("Houve um erro ao tentar realizar o login!");
 
                 resposta.text().then(texto => {
                     console.error(texto);

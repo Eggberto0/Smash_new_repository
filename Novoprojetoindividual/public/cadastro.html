@@ -164,11 +164,14 @@
     
                 if (resposta.ok) {
                     //cardErro.style.display = "block";
-    
+                    
                     //mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
                     alert("Cadastro feito com sucesso!");
                     setTimeout(() => {
                         window.location = "entrar.html";
+                    }, "2000")
+                    setTimeout(() => {
+                        updatePersonagem();
                     }, "2000")
     
                     // limparFormulario();
@@ -190,5 +193,42 @@
         //}
 
 
+    }
+
+    function updatePersonagem() {
+        var personagemVar = Number(Personagem.value)
+        fetch("/usuarios/cadastrarPersonagem", {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    personagemServer: personagemVar
+                })
+            }).then(function (resposta) {
+    
+                console.log("resposta: ", resposta);
+    
+                if (resposta.ok) {
+                    //cardErro.style.display = "block";
+                    
+                    //mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                    alert("Cadastro feito com sucesso!");
+                    setTimeout(() => {
+                        window.location = "entrar.html";
+                    }, "2000")
+    
+                    // limparFormulario();
+                    // finalizarAguardar();
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                    alert("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                // finalizarAguardar();
+            });
     }
 </script>

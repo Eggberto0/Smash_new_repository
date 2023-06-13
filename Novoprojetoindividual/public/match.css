@@ -7,6 +7,7 @@
 
 body {
     overflow-x: hidden;
+    background-color: #0a0a0a;
 }
 
 /* Navbbar */
@@ -36,7 +37,7 @@ body {
         background-size: 85px;
         background-repeat: no-repeat;
     width: 150px;
-    height: 65px;
+    height: 15px;
     padding: 35px;
     border-radius: 65px;
 }
@@ -108,4 +109,52 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: end;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #fe0015;
+    border-left: solid 2px #0a0a0a;
+    border-top: #0a0a0a solid 2px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0a0a0a; 
+    transition: all ease-in-out 0.2s;
+    border: #ffffff solid 1px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff; 
+}
+
+.container_index {
+    margin-top: 20vh;
+    height: 1000px;
+}
+
+.opcoesMatch {
+    height: 45px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.characters {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.characters img {
+    height: 250px;
 }

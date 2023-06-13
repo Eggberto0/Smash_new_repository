@@ -146,15 +146,123 @@ a:hover {
     width: 100vw;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .characters {
     width: 100%;
-    height: 250px;
+    height: 400px;
     display: flex;
     justify-content: space-evenly;
+    display: flex;
 }
 
 .characters img {
-    height: 250px;
+    height: 370px;
+}
+
+.boxPersonagem {
+    height: 400px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: solid #ffffff 7px;
+}
+
+#personagem1 {
+    background-color: #fe0015;
+}
+
+#personagem2 {
+    background-color: #0300ce;
+}
+
+#personagem3 {
+    background-color: #fefa00;
+}
+
+#personagem4 {
+    background-color: #00b90f;
+}
+
+#personagem5 {
+    background-color: #fe7b00;
+}
+
+#personagem6 {
+    background-color: #00edfe;
+}
+
+#personagem7 {
+    background-color: #e953e1;
+}
+
+#personagem8 {
+    background-color: #6858f8;
+}
+
+.names {
+    color: #ffffff;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.names div {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    color: black;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    transition: all ease-in-out 0.1s;
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #fe0015;
+    color: white;
+}
+
+select {
+    width: 120px;
+    height: 40px;
+    color: black;
+    background-color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 0px;
+    margin: 5px;
+}
+
+.map {
+    margin-top: 60px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.containerMap {
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
+.containerMap img {
+    height: 400px;
 }

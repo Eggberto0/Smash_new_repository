@@ -138,7 +138,7 @@ a:hover {
 
 .container_index {
     margin-top: 20vh;
-    height: 1000px;
+    height: 1050px;
 }
 
 .opcoesMatch {
@@ -256,13 +256,22 @@ select {
 }
 
 .containerMap {
-    width: 800px;
+    width: 712px;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 400px;
+    border: solid 7px #ffffff;
 }
 
 .containerMap img {
     height: 400px;
+}
+
+.playerDisplay {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }

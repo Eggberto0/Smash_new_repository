@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,143 +9,161 @@
     <link rel="shortcut icon" href="images/Smash_Ball.svg_branco.png" type="image/x-icon">
     <title>SMASH - Random Match</title>
 </head>
-<body>
-    
-<div class="tela">    
-    <div class="sidebar" id="sidebar">
 
-    </div>
-    <div class="navbar">
-        <div class="navbar_logo">
-            <div class="navbar_logo_image"></div>
+<body>
+
+    <div class="tela">
+        <div class="sidebar" id="sidebar">
+
         </div>
-        <div class="navbar_logo_text"></div>
-        <div class="navbar_opcoes">
-            <a onclick="sidebarOpen()" style="cursor: pointer;">Menu</a>
+        <div class="navbar">
+            <div class="navbar_logo">
+                <div class="navbar_logo_image"></div>
+            </div>
+            <div class="navbar_logo_text"></div>
+            <div class="navbar_opcoes">
+                <a onclick="sidebarOpen()" style="cursor: pointer;">Menu</a>
+            </div>
         </div>
     </div>
-</div>
-<div class="container_index">
-    <div class="opcoesMatch">
-        <select name="numPlayers" id="numPlayers">
-            <option value="2">2 Players</option>
-            <option value="3">3 Players</option>
-            <option value="4">4 Players</option>
-            <option value="5">5 Players</option>
-            <option value="6">6 Players</option>
-            <option value="7">7 Players</option>
-            <option value="8">8 Players</option>
-        </select>
-        <button onclick="randomizar()">Gerar partida</button>
+    <div class="container_index">
+        <div class="placar" id="placar">
+            <div id="placar1">
+                <span>PLAYER 1: <spam class="pont" id="pont1">0</spam></span>
+                <button onclick="addPonto1()">Adicionar</button>
+            </div>
+            <div id="placar2">
+                <span>PLAYER 2: <spam class="pont" id="pont2">0</spam></span>
+                <button onclick="addPonto2()">Adicionar</button>
+            </div>
+        </div>
+        <div class="opcoesMatch">
+            <select name="numPlayers" id="numPlayers">
+                <option value="2">2 Players</option>
+                <option value="3">3 Players</option>
+                <option value="4">4 Players</option>
+                <option value="5">5 Players</option>
+                <option value="6">6 Players</option>
+                <option value="7">7 Players</option>
+                <option value="8">8 Players</option>
+            </select>
+            <button onclick="randomizar()">Gerar partida</button>
+        </div>
+        <div class="names" id="names">
+            <div id="nomes1"></div>
+            <div id="nomes2"></div>
+        </div>
+        <div class="characters" id="characters">
+            <div id="personagem1" class="boxPersonagem"><img
+                    src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt="">
+            </div>
+            <div id="personagem2" class="boxPersonagem"><img
+                    src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt="">
+            </div>
+        </div>
+        <div id="playerDisplay" class="playerDisplay">
+            <div id="display1">PLAYER 1</div>
+            <div id="display2">PLAYER 2</div>
+        </div>
+        <div class="map" id="map">
+            <div class="containerMap" id="containerMap"><img
+                    src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt="">
+            </div>
+        </div>
     </div>
-    <div class="names" id="names">
-        <div id="nomes1">Player 1</div>
-        <div id="nomes2">Player 2</div>
-    </div>
-    <div class="characters" id="characters">
-        <div id="personagem1" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
-        <div id="personagem2" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
-    </div>
-    <div id="playerDisplay" class="playerDisplay">
-        <div id="display1"></div>
-        <div id="display2"></div>
-    </div>
-    <div class="map" id="map">
-        <div class="containerMap" id="containerMap"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
-    </div>
-</div>
-    
+
 
 </body>
+
 </html>
 
 <script>
 
     var listaPersonagens = [
-                "Mario",
-                "Donkey Kong",
-                "Link",
-                "Samus",
-                "Dark Samus",
-                "Yoshi",
-                "Kirby",
-                "Fox",
-                "Pikachu",
-                "Luigi",
-                "Ness",
-                "Capitan Falcon",
-                "Jigglypuff",
-                "Peach",
-                "Daisy",
-                "Bowser",
-                "Ice Climbers",
-                "Sheik",
-                "Zelda",
-                "Dr. Mario",
-                "Pichu",
-                "Falco",
-                "Marth",
-                "Lucina",
-                "Young Link",
-                "Ganondorf",
-                "Mewtwo",
-                "Roy",
-                "Chrom",
-                "Mr. Game & Watch",
-                "Meta Knight",
-                "Pit",
-                "Dark Pit",
-                "Zero Suit Samus",
-                "Wario",
-                "Snake",
-                "Ike",
-                "Pokémon Trainer",
-                "Diddy Kong",
-                "Lucas",
-                "Sonic",
-                "King Dedede",
-                "Olimar",
-                "Lucario",
-                "R.O.B.",
-                "Toon Link",
-                "Wolf",
-                "Villager",
-                "Mega Man",
-                "Wii Fit TRAINER",
-                "Rosalina & Luma",
-                "Little Mac",
-                "Greninja",
-                "Mii Fighter",
-                "Palutena",
-                "Pac-Man",
-                "Robin",
-                "Shulk",
-                "Bowser Jr.",
-                "Duck Hunt",
-                "Ryu",
-                "Ken",
-                "Cloud",
-                "Corrin",
-                "Bayonetta",
-                "Inkling",
-                "Ridley",
-                "Simon",
-                "Richter",
-                "King K. Rool",
-                "Isabelle",
-                "Incineroar",
-                "Piranha Plant",
-                "Joker",
-                "Hero",
-                "Banjo & Kazooie",
-                "Terry",
-                "Byleth",
-                "Min Min",
-                "Steve",
-                "Sephiroth",
-                "Pyra/Mythra",
-                "Kazuya",
-                "Sora"
+        "Mario",
+        "Donkey Kong",
+        "Link",
+        "Samus",
+        "Dark Samus",
+        "Yoshi",
+        "Kirby",
+        "Fox",
+        "Pikachu",
+        "Luigi",
+        "Ness",
+        "Capitan Falcon",
+        "Jigglypuff",
+        "Peach",
+        "Daisy",
+        "Bowser",
+        "Ice Climbers",
+        "Sheik",
+        "Zelda",
+        "Dr. Mario",
+        "Pichu",
+        "Falco",
+        "Marth",
+        "Lucina",
+        "Young Link",
+        "Ganondorf",
+        "Mewtwo",
+        "Roy",
+        "Chrom",
+        "Mr. Game & Watch",
+        "Meta Knight",
+        "Pit",
+        "Dark Pit",
+        "Zero Suit Samus",
+        "Wario",
+        "Snake",
+        "Ike",
+        "Pokémon Trainer",
+        "Diddy Kong",
+        "Lucas",
+        "Sonic",
+        "King Dedede",
+        "Olimar",
+        "Lucario",
+        "R.O.B.",
+        "Toon Link",
+        "Wolf",
+        "Villager",
+        "Mega Man",
+        "Wii Fit TRAINER",
+        "Rosalina & Luma",
+        "Little Mac",
+        "Greninja",
+        "Mii Fighter",
+        "Palutena",
+        "Pac-Man",
+        "Robin",
+        "Shulk",
+        "Bowser Jr.",
+        "Duck Hunt",
+        "Ryu",
+        "Ken",
+        "Cloud",
+        "Corrin",
+        "Bayonetta",
+        "Inkling",
+        "Ridley",
+        "Simon",
+        "Richter",
+        "King K. Rool",
+        "Isabelle",
+        "Incineroar",
+        "Piranha Plant",
+        "Joker",
+        "Hero",
+        "Banjo & Kazooie",
+        "Terry",
+        "Byleth",
+        "Min Min",
+        "Steve",
+        "Sephiroth",
+        "Pyra/Mythra",
+        "Kazuya",
+        "Sora"
     ]
 
     var listaImagens = [
@@ -347,7 +366,16 @@
         `<img src="https://ssb.wiki.gallery/images/thumb/1/17/SSBU-Midgar.jpg/800px-SSBU-Midgar.jpg" alt="">`,
         `<img src="https://ssb.wiki.gallery/images/thumb/0/0d/SSBU-Umbra_Clock_Tower.png/800px-SSBU-Umbra_Clock_Tower.png" alt="">`,
         `<img src="https://ssb.wiki.gallery/images/thumb/b/bd/SSBU-Hanenbow.png/800px-SSBU-Hanenbow.png" alt="">`
-]
+    ]
+
+    var pontPL1 = 0;
+    var pontPL2 = 0;
+    var pontPL3 = 0;
+    var pontPL4 = 0;
+    var pontPL5 = 0;
+    var pontPL6 = 0;
+    var pontPL7 = 0;
+    var pontPL8 = 0;
 
     function sidebarOpen() {
         var Sbar = document.getElementById("sidebar");
@@ -379,89 +407,209 @@
         var player6 = parseInt(Math.random() * 84);
         var player7 = parseInt(Math.random() * 84);
         var player8 = parseInt(Math.random() * 84);
-        var mapa = parseInt(Math.random() * 112); 
-        
+        var mapa = parseInt(Math.random() * 112);
+
         containerMap.innerHTML = listaMapas[mapa];
 
         nomes1.innerHTML = listaPersonagens[player1];
-            personagem1.innerHTML = listaImagens[player1];
+        personagem1.innerHTML = listaImagens[player1];
         nomes2.innerHTML = listaPersonagens[player2];
-            personagem2.innerHTML = listaImagens[player2];
+        personagem2.innerHTML = listaImagens[player2];
         nomes3.innerHTML = listaPersonagens[player3];
-            personagem3.innerHTML = listaImagens[player3];
+        personagem3.innerHTML = listaImagens[player3];
         nomes4.innerHTML = listaPersonagens[player4];
-            personagem4.innerHTML = listaImagens[player4];
+        personagem4.innerHTML = listaImagens[player4];
         nomes5.innerHTML = listaPersonagens[player5];
-            personagem5.innerHTML = listaImagens[player5];
+        personagem5.innerHTML = listaImagens[player5];
         nomes6.innerHTML = listaPersonagens[player6];
-            personagem6.innerHTML = listaImagens[player6];
+        personagem6.innerHTML = listaImagens[player6];
         nomes7.innerHTML = listaPersonagens[player7];
-            personagem7.innerHTML = listaImagens[player7];
+        personagem7.innerHTML = listaImagens[player7];
         nomes8.innerHTML = listaPersonagens[player8];
-            personagem8.innerHTML = listaImagens[player8];
+        personagem8.innerHTML = listaImagens[player8];
     }
 
-    numPlayers.addEventListener("change", function() {
-  
-    var selectedOption = numPlayers.value;
+    numPlayers.addEventListener("change", function () {
 
-    if (selectedOption == "2") {
-        characters.innerHTML = `<div id="personagem1" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
+        var selectedOption = numPlayers.value;
+
+        if (selectedOption == "2") {
+            characters.innerHTML = `<div id="personagem1" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem2" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>`;
 
-        names.innerHTML =  `<div id="nomes1">Player 1</div>
-                            <div id="nomes2">Player 2</div>`;
+            names.innerHTML = `<div id="nomes1"></div>
+                            <div id="nomes2"></div>`;
 
-    } else if (selectedOption == "3") {
-        characters.innerHTML = `<div id="personagem1" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
+            containerMap.innerHTML = `<img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt="">`;
+
+            playerDisplay.innerHTML = `<div id="display1">PLAYER 1</div>
+                                   <div id="display2">PLAYER 2</div>`;
+
+            placar.innerHTML = `<div id="placar1">
+                <span>PLAYER 1: <spam class="pont" id="pont1">0</spam></span>
+                <button onclick="addPonto1()">Adicionar</button>
+            </div>
+            <div id="placar2">
+                <span>PLAYER 2: <spam class="pont" id="pont2">0</spam></span>
+                <button onclick="addPonto2()">Adicionar</button>
+            </div>`;
+
+        } else if (selectedOption == "3") {
+            characters.innerHTML = `<div id="personagem1" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem2" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem3" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>`;
 
-        names.innerHTML =  `<div id="nomes1">Player 1</div>
-                            <div id="nomes2">Player 2</div>
-                            <div id="nomes3">Player 3</div>`;
+            names.innerHTML = `<div id="nomes1"></div>
+                            <div id="nomes2"></div>
+                            <div id="nomes3"></div>`;
 
-    } else if (selectedOption == "4") {
-        characters.innerHTML = `<div id="personagem1" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
+            containerMap.innerHTML = `<img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt="">`;
+
+            playerDisplay.innerHTML = `<div id="display1">PLAYER 1</div>
+                                   <div id="display2">PLAYER 2</div>
+                                   <div id="display3">PLAYER 3</div>`;
+
+            placar.innerHTML = `<div id="placar1">
+                <span>PLAYER 1: <spam class="pont" id="pont1">0</spam></span>
+                <button onclick="addPonto1()">Adicionar</button>
+            </div>
+            <div id="placar2">
+                <span>PLAYER 2: <spam class="pont" id="pont2">0</spam></span>
+                <button onclick="addPonto2()">Adicionar</button>
+            </div>
+            <div id="placar3">
+                <span>PLAYER 3: <spam class="pont" id="pont3">0</spam></span>
+                <button onclick="addPonto3()">Adicionar</button>
+            </div>`;
+
+        } else if (selectedOption == "4") {
+            characters.innerHTML = `<div id="personagem1" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem2" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem3" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem4" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>`;
 
-        names.innerHTML =  `<div id="nomes1">Player 1</div>
-                            <div id="nomes2">Player 2</div>
-                            <div id="nomes3">Player 3</div>
-                            <div id="nomes4">Player 4</div>`;
+            names.innerHTML = `<div id="nomes1"></div>
+                            <div id="nomes2"></div>
+                            <div id="nomes3"></div>
+                            <div id="nomes4"></div>`;
 
-    } else if (selectedOption == "5") {
-        characters.innerHTML = `<div id="personagem1" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
+            containerMap.innerHTML = `<img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt="">`;
+
+            playerDisplay.innerHTML = `<div id="display1">PLAYER 1</div>
+                                   <div id="display2">PLAYER 2</div>
+                                   <div id="display3">PLAYER 3</div>
+                                   <div id="display4">PLAYER 4</div>`;
+
+            placar.innerHTML = `<div id="placar1">
+                <span>PLAYER 1: <spam class="pont" id="pont1">0</spam></span>
+                <button onclick="addPonto1()">Adicionar</button>
+            </div>
+            <div id="placar2">
+                <span>PLAYER 2: <spam class="pont" id="pont2">0</spam></span>
+                <button onclick="addPonto2()">Adicionar</button>
+            </div>
+            <div id="placar3">
+                <span>PLAYER 3: <spam class="pont" id="pont3">0</spam></span>
+                <button onclick="addPonto3()">Adicionar</button>
+            </div>
+            <div id="placar4">
+                <span>PLAYER 4: <spam class="pont" id="pont4">0</spam></span>
+                <button onclick="addPonto4()">Adicionar</button>
+            </div>`;
+
+        } else if (selectedOption == "5") {
+            characters.innerHTML = `<div id="personagem1" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem2" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem3" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem4" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem5" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>`;
 
-        names.innerHTML =  `<div id="nomes1">Player 1</div>
-                            <div id="nomes2">Player 2</div>
-                            <div id="nomes3">Player 3</div>
-                            <div id="nomes4">Player 4</div>
-                            <div id="nomes5">Player 5</div>`;
+            names.innerHTML = `<div id="nomes1"></div>
+                            <div id="nomes2"></div>
+                            <div id="nomes3"></div>
+                            <div id="nomes4"></div>
+                            <div id="nomes5"></div>`;
 
-    } else if (selectedOption == "6") {
-        characters.innerHTML = `<div id="personagem1" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
+            containerMap.innerHTML = `<img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt="">`;
+
+            playerDisplay.innerHTML = `<div id="display1">PLAYER 1</div>
+                                   <div id="display2">PLAYER 2</div>
+                                   <div id="display3">PLAYER 3</div>
+                                   <div id="display4">PLAYER 4</div>
+                                   <div id="display5">PLAYER 5</div>`;
+
+            placar.innerHTML = `<div id="placar1">
+                <span>PLAYER 1: <spam class="pont" id="pont1">0</spam></span>
+                <button onclick="addPonto1()">Adicionar</button>
+            </div>
+            <div id="placar2">
+                <span>PLAYER 2: <spam class="pont" id="pont2">0</spam></span>
+                <button onclick="addPonto2()">Adicionar</button>
+            </div>
+            <div id="placar3">
+                <span>PLAYER 3: <spam class="pont" id="pont3">0</spam></span>
+                <button onclick="addPonto3()">Adicionar</button>
+            </div>
+            <div id="placar4">
+                <span>PLAYER 4: <spam class="pont" id="pont4">0</spam></span>
+                <button onclick="addPonto4()">Adicionar</button>
+            </div>
+            <div id="placar5">
+                <span>PLAYER 5: <spam class="pont" id="pont5">0</spam></span>
+                <button onclick="addPonto5()">Adicionar</button>
+            </div>`;
+
+        } else if (selectedOption == "6") {
+            characters.innerHTML = `<div id="personagem1" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem2" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem3" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem4" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem5" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem6" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>`;
 
-        names.innerHTML =  `<div id="nomes1">Player 1</div>
-                            <div id="nomes2">Player 2</div>
-                            <div id="nomes3">Player 3</div>
-                            <div id="nomes4">Player 4</div>
-                            <div id="nomes5">Player 5</div>
-                            <div id="nomes6">Player 6</div>`;
+            names.innerHTML = `<div id="nomes1"></div>
+                            <div id="nomes2"></div>
+                            <div id="nomes3"></div>
+                            <div id="nomes4"></div>
+                            <div id="nomes5"></div>
+                            <div id="nomes6"></div>`;
 
-    } else if (selectedOption == "7") {
-        characters.innerHTML = `<div id="personagem1" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
+            containerMap.innerHTML = `<img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt="">`;
+
+            playerDisplay.innerHTML = `<div id="display1">PLAYER 1</div>
+                                   <div id="display2">PLAYER 2</div>
+                                   <div id="display3">PLAYER 3</div>
+                                   <div id="display4">PLAYER 4</div>
+                                   <div id="display5">PLAYER 5</div>
+                                   <div id="display6">PLAYER 6</div>`;
+
+            placar.innerHTML = `<div id="placar1">
+                <span>PLAYER 1: <spam class="pont" id="pont1">0</spam></span>
+                <button onclick="addPonto1()">Adicionar</button>
+            </div>
+            <div id="placar2">
+                <span>PLAYER 2: <spam class="pont" id="pont2">0</spam></span>
+                <button onclick="addPonto2()">Adicionar</button>
+            </div>
+            <div id="placar3">
+                <span>PLAYER 3: <spam class="pont" id="pont3">0</spam></span>
+                <button onclick="addPonto3()">Adicionar</button>
+            </div>
+            <div id="placar4">
+                <span>PLAYER 4: <spam class="pont" id="pont4">0</spam></span>
+                <button onclick="addPonto4()">Adicionar</button>
+            </div>
+            <div id="placar5">
+                <span>PLAYER 5: <spam class="pont" id="pont5">0</spam></span>
+                <button onclick="addPonto5()">Adicionar</button>
+            </div>
+            <div id="placar6">
+                <span>PLAYER 6: <spam class="pont" id="pont6">0</spam></span>
+                <button onclick="addPonto6()">Adicionar</button>
+            </div>`;
+
+        } else if (selectedOption == "7") {
+            characters.innerHTML = `<div id="personagem1" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem2" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem3" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem4" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
@@ -469,16 +617,55 @@
                                 <div id="personagem6" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem7" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>`;
 
-        names.innerHTML =  `<div id="nomes1">Player 1</div>
-                            <div id="nomes2">Player 2</div>
-                            <div id="nomes3">Player 3</div>
-                            <div id="nomes4">Player 4</div>
-                            <div id="nomes5">Player 5</div>
-                            <div id="nomes6">Player 6</div>
-                            <div id="nomes7">Player 7</div>`;
+            names.innerHTML = `<div id="nomes1"></div>
+                            <div id="nomes2"></div>
+                            <div id="nomes3"></div>
+                            <div id="nomes4"></div>
+                            <div id="nomes5"></div>
+                            <div id="nomes6"></div>
+                            <div id="nomes7"></div>`;
 
-    } else if (selectedOption == "8") {
-        characters.innerHTML = `<div id="personagem1" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
+            containerMap.innerHTML = `<img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt="">`;
+
+            playerDisplay.innerHTML = `<div id="display1">PLAYER 1</div>
+                                   <div id="display2">PLAYER 2</div>
+                                   <div id="display3">PLAYER 3</div>
+                                   <div id="display4">PLAYER 4</div>
+                                   <div id="display5">PLAYER 5</div>
+                                   <div id="display6">PLAYER 6</div>
+                                   <div id="display7">PLAYER 7</div>`;
+
+            placar.innerHTML = `<div id="placar1">
+                <span>PLAYER 1: <spam class="pont" id="pont1">0</spam></span>
+                <button onclick="addPonto1()">Adicionar</button>
+            </div>
+            <div id="placar2">
+                <span>PLAYER 2: <spam class="pont" id="pont2">0</spam></span>
+                <button onclick="addPonto2()">Adicionar</button>
+            </div>
+            <div id="placar3">
+                <span>PLAYER 3: <spam class="pont" id="pont3">0</spam></span>
+                <button onclick="addPonto3()">Adicionar</button>
+            </div>
+            <div id="placar4">
+                <span>PLAYER 4: <spam class="pont" id="pont4">0</spam></span>
+                <button onclick="addPonto4()">Adicionar</button>
+            </div>
+            <div id="placar5">
+                <span>PLAYER 5: <spam class="pont" id="pont5">0</spam></span>
+                <button onclick="addPonto5()">Adicionar</button>
+            </div>
+            <div id="placar6">
+                <span>PLAYER 6: <spam class="pont" id="pont6">0</spam></span>
+                <button onclick="addPonto6()">Adicionar</button>
+            </div>
+            <div id="placar7">
+                <span>PLAYER 7: <spam class="pont" id="pont7">0</spam></span>
+                <button onclick="addPonto7()">Adicionar</button>
+            </div>`;
+
+        } else if (selectedOption == "8") {
+            characters.innerHTML = `<div id="personagem1" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem2" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem3" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem4" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
@@ -486,16 +673,109 @@
                                 <div id="personagem6" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem7" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>
                                 <div id="personagem8" class="boxPersonagem"><img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt=""></div>`;
-        
-        names.innerHTML =  `<div id="nomes1">Player 1</div>
-                            <div id="nomes2">Player 2</div>
-                            <div id="nomes3">Player 3</div>
-                            <div id="nomes4">Player 4</div>
-                            <div id="nomes5">Player 5</div>
-                            <div id="nomes6">Player 6</div>
-                            <div id="nomes7">Player 7</div>
-                            <div id="nomes8">Player 8</div>`;
-    }
+
+            names.innerHTML = `<div id="nomes1"></div>
+                            <div id="nomes2"></div>
+                            <div id="nomes3"></div>
+                            <div id="nomes4"></div>
+                            <div id="nomes5"></div>
+                            <div id="nomes6"></div>
+                            <div id="nomes7"></div>
+                            <div id="nomes8"></div>`;
+
+            containerMap.innerHTML = `<img src="https://i0.wp.com/www.letz-smash.lu/wp-content/uploads/2021/09/Random.png?w=3840&ssl=1" alt="">`;
+
+            playerDisplay.innerHTML = `<div id="display1">PLAYER 1</div>
+                                   <div id="display2">PLAYER 2</div>
+                                   <div id="display3">PLAYER 3</div>
+                                   <div id="display4">PLAYER 4</div>
+                                   <div id="display5">PLAYER 5</div>
+                                   <div id="display6">PLAYER 6</div>
+                                   <div id="display7">PLAYER 7</div>
+                                   <div id="display8">PLAYER 8</div>`;
+
+            placar.innerHTML = `<div id="placar1">
+                <span>PLAYER 1: <spam class="pont" id="pont1">0</spam></span>
+                <button onclick="addPonto1()">Adicionar</button>
+            </div>
+            <div id="placar2">
+                <span>PLAYER 2: <spam class="pont" id="pont2">0</spam></span>
+                <button onclick="addPonto2()">Adicionar</button>
+            </div>
+            <div id="placar3">
+                <span>PLAYER 3: <spam class="pont" id="pont3">0</spam></span>
+                <button onclick="addPonto3()">Adicionar</button>
+            </div>
+            <div id="placar4">
+                <span>PLAYER 4: <spam class="pont" id="pont4">0</spam></span>
+                <button onclick="addPonto4()">Adicionar</button>
+            </div>
+            <div id="placar5">
+                <span>PLAYER 5: <spam class="pont" id="pont5">0</spam></span>
+                <button onclick="addPonto5()">Adicionar</button>
+            </div>
+            <div id="placar6">
+                <span>PLAYER 6: <spam class="pont" id="pont6">0</spam></span>
+                <button onclick="addPonto6()">Adicionar</button>
+            </div>
+            <div id="placar7">
+                <span>PLAYER 7: <spam class="pont" id="pont7">0</spam></span>
+                <button onclick="addPonto7()">Adicionar</button>
+            </div>
+            <div id="placar8">
+                <span>PLAYER 8: <spam class="pont" id="pont8">0</spam></span>
+                <button onclick="addPonto8()">Adicionar</button>
+            </div>`;
+        }
+
+        pontPL1 = 0;
+        pontPL2 = 0;
+        pontPL3 = 0;
+        pontPL4 = 0;
+        pontPL5 = 0;
+        pontPL6 = 0;
+        pontPL7 = 0;
+        pontPL8 = 0;
     });
+
+    function addPonto1() {
+        pontPL1++
+        pont1.innerHTML = pontPL1
+    }
+
+    function addPonto2() {
+        pontPL2++
+        pont2.innerHTML = pontPL2
+    }
+
+    function addPonto3() {
+        pontPL3++
+        pont3.innerHTML = pontPL3
+    }
+
+    function addPonto4() {
+        pontPL4++
+        pont4.innerHTML = pontPL4
+    }
+
+    function addPonto5() {
+        pontPL5++
+        pont5.innerHTML = pontPL5
+    }
+
+    function addPonto6() {
+        pontPL6++
+        pont6.innerHTML = pontPL6
+    }
+
+    function addPonto7() {
+        pontPL7++
+        pont7.innerHTML = pontPL7
+    }
+
+    function addPonto8() {
+        pontPL8++
+        pont8.innerHTML = pontPL8
+    }
 
 </script>

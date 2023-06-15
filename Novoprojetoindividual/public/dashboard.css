@@ -161,7 +161,7 @@ canvas {
   
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #fe0015;
+    background: #ffffff;
     border-left: solid 2px #0a0a0a;
     border-top: #0a0a0a solid 2px;
 }
@@ -170,10 +170,10 @@ canvas {
 ::-webkit-scrollbar-thumb {
     background: #0a0a0a; 
     transition: all ease-in-out 0.2s;
-    border: #ffffff solid 1px;
+    border: #fe0015 solid 1px;
 }
   
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #ffffff; 
+    background: #fe0015; 
 }

@@ -104,7 +104,7 @@ a:hover {
 .bottom {
     display: flex;
     background-color: #0a0a0a;
-    height: 300px;
+    height: 200px;
     width: 100%;
 }
 
@@ -338,21 +338,20 @@ h1 {
   
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #fe0015;
+    background: #ffffff;
     border-left: solid 2px #0a0a0a;
     border-top: #0a0a0a solid 2px;
 }
    
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #0a0a0a; 
+    background: #1f1f1f; 
     transition: all ease-in-out 0.2s;
-    border: #ffffff solid 1px;
 }
   
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #ffffff; 
+    background: #fe0015; 
 }
 
 .about {

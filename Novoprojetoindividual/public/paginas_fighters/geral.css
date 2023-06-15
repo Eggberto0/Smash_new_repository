@@ -236,3 +236,27 @@ h1 {
     height: 800px;
     overflow-y: hidden;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-left: solid 2px #0a0a0a;
+    border-top: #0a0a0a solid 2px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1f1f1f; 
+    transition: all ease-in-out 0.2s;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #fe0015; 
+}
